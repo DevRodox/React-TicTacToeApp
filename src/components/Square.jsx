@@ -1,18 +1,17 @@
+import { useSquare } from "../hooks/useSquare";
 
-
-const squareClick = () => {
-    console.log('Click');
-};
-
-export const Square = ({ casilla }) => {
+export const Square = ({ turn, setTurn }) => {
+    
+    const { value, setSquareValue } = useSquare(turn, setTurn);
 
     return(
         <>
             <div 
                 className="square"
-                onClick={ squareClick }
-            >{ casilla }
+                onClick={ setSquareValue }
+            >{ value }
             </div>
         </>
     );
 };
+
