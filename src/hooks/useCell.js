@@ -1,11 +1,11 @@
 import { useState } from "react";
 
-export const useSquare = (turn, setTurn) => {
+export const useCell = (turn, setTurn) => {
 
     const [ value, setValue ] = useState("")
     const [ click, setClick ] = useState(false); 
 
-    const setSquareValue = () => {
+    const setCellValue = () => {
         if( click ) return;
 
         if(turn){
@@ -15,11 +15,10 @@ export const useSquare = (turn, setTurn) => {
         }
         setTurn( !turn );
         setClick( true );
-        return value;
     };
 
     return{
         value,
-        setSquareValue
+        setCellValue
     };
 };

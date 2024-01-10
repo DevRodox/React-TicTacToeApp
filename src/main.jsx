@@ -4,7 +4,7 @@ import { TicTacToeApp } from './TicTacToeApp'
 import './style.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <TicTacToeApp/>
-  </React.StrictMode>,
+  // </React.StrictMode>,
 );

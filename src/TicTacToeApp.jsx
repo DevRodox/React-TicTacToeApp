@@ -1,4 +1,4 @@
-import { renderSquares } from "./helpers/renderSquares";
+import { renderCells } from "./helpers/renderCells";
 
 export const TicTacToeApp = () => {
     
@@ -11,9 +11,8 @@ export const TicTacToeApp = () => {
                 <h1 className="O">O</h1>
             </div>
 
-
             <div className="container">
-               { renderSquares() }
+               { renderCells() }
             </div>
             
         </>
