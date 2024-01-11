@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useCell } from "../hooks/useCell";
 
 export const Cell = ({ turn, setTurn, cellController, cellNumber }) => {
@@ -6,13 +5,11 @@ export const Cell = ({ turn, setTurn, cellController, cellNumber }) => {
     const { value, setCellValue } = useCell(turn, setTurn);
 
     const cellClicked = () => {
-        setCellValue();
+        setCellValue( (value) => {
+            cellController( cellNumber, value );
+        });
     }
 
-    useEffect( () => {
-        cellController( cellNumber, value );
-    }, [value]);
-    
     return(
         <>
             <div 

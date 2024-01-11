@@ -5,16 +5,13 @@ export const useCell = (turn, setTurn) => {
     const [ value, setValue ] = useState("")
     const [ click, setClick ] = useState(false); 
 
-    const setCellValue = () => {
+    const setCellValue = (callback) => {
         if( click ) return;
-
-        if(turn){
-            setValue("X");
-        }else{
-            setValue("O");
-        }
+        const newValue = turn ? 'X' : 'O';
         setTurn( !turn );
         setClick( true );
+        setValue(newValue);
+        callback(newValue);
     };
 
     return{
