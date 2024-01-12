@@ -2,8 +2,6 @@ import { renderCells } from "./helpers/renderCells";
 
 export const TicTacToeApp = () => {
     
-    
-
     return(
         <>
             <div className="Player-Names"> 
